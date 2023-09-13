@@ -1,4 +1,5 @@
-//merge_sort
+//merge_sort 
+//O(n*logn) insure 
 
 #include <iostream>
 #include <cmath>
@@ -9,16 +10,16 @@ void MergeSort(int *A, int p, int q) {
 		int k = floor((p + q) / 2);
 		MergeSort(A, p, k);
 		MergeSort(A, k + 1, q);
-		//ÇÕº´ 
+		//í•©ë³‘ 
 		int B[8] = { 0, };
 		int a = p;
 		int b = k + 1;
 		for (int i = p; i <= q; i++) {
-			if (a == k + 1) {//¿ÞÂÊÀ» ¸ÕÀú ´Ù ½èÀ» ¶§
+			if (a == k + 1) {//ì™¼ìª½ì„ ë¨¼ì € ë‹¤ ì¼ì„ ë•Œ
 				B[i] = A[b];
 				b++;
 			}
-			else if (b==q+1){//¿À¸¥ÂÊÀ» ¸ÕÀú ´Ù ½èÀ» ¶§
+			else if (b==q+1){//ì˜¤ë¥¸ìª½ì„ ë¨¼ì € ë‹¤ ì¼ì„ ë•Œ
 				B[i] = A[a];
 				a++;
 			}
@@ -41,7 +42,7 @@ void MergeSort(int *A, int p, int q) {
 int main() {
 	int A[8] = { 37,10,22,30,35,13,25,24 };
 
-	MergeSort(A, 0, 7);//Á¤·Ä Áß...
+	MergeSort(A, 0, 7);//ì •ë ¬ ì¤‘...
 
 	cout << "Sorted A = [";
 	for (int i = 0; i < 8; i++)
