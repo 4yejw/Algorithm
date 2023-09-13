@@ -1,5 +1,5 @@
 //merge_sort 
-//O(n*logn) insure 
+//O(n*logn) ensure
 
 #include <iostream>
 #include <cmath>
