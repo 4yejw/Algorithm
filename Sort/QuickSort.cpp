@@ -1,3 +1,4 @@
+
 //quick_sort 
 //about O(n*log n)
 
@@ -7,14 +8,12 @@
 #include <ctime>
 using namespace std;
 
-
 void ShowList(int* A, int left, int right) {
 	cout << "[ ";
 	for (int i = left; i <= right; i++)
 		cout << A[i] << ' ';
 	cout << "]\n";
 }
-
 
 void QuickSort(int* A, int left, int right) {
 	if (left < right) {
@@ -66,5 +65,4 @@ int main() {
 
 	cout << "°á°ú = ";
 	ShowList(A, 0,11);
-
 }
