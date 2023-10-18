@@ -4,12 +4,13 @@
 #include <algorithm>
 using namespace std;
 
-//전체 행렬을 출력하는 함수
+//전체 편집거리 이차원배열을 출력하는 함수
 void ShowMatrix(int** E, string S, string T, int m, int n);
 
 int main() {
-	string S, T;
+	string S, T;  //문자열 source, target
 	
+	//source 와 target을 입력받는다
 	cout << "\tinput source : ";
 	cin >> S;
 	cout << "\tinput target : ";
@@ -38,12 +39,12 @@ int main() {
 		}
 	}
 
-	ShowMatrix(E,S,T,m, n); //전체 행렬 출력
+	ShowMatrix(E,S,T,m, n); //전체 편집거리 이차원배열 출력
 	cout << "\t"<<S <<" -> "<<T << " 편집거리는 " << E[m][n] << " 입니다\n";
 
 }
 
-//전체 행렬 출력
+//전체 편집거리 이차원배열 출력
 void ShowMatrix(int** E, string S, string T, int m, int n) {
 	cout << "\n\t\t     ";
 	for (int i = 0; i <= n; i++)
